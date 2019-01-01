@@ -1,11 +1,11 @@
-﻿using ConsoleApp1.Models;
+﻿using checkCryptoRate.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace ConsoleApp1.Helpers
+namespace checkCryptoRate.Helpers
 {
     public class GetHelpData
     {

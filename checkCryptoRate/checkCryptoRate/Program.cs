@@ -1,10 +1,10 @@
-﻿using ConsoleApp1.Helpers;
-using ConsoleApp1.Models;
+﻿using checkCryptoRate.Helpers;
+using checkCryptoRate.Models;
 using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp1
-{
+namespace checkCryptoRate
+{ 
     class Program
     {
         static void Main(string[] args)

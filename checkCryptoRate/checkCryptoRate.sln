@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{6051A4F0-A777-4A19-80F0-C075FC68D5BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "checkCryptoRate", "checkCryptoRate\checkCryptoRate.csproj", "{06638AC4-6CFD-4E3D-9F55-F70B40627CBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6051A4F0-A777-4A19-80F0-C075FC68D5BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6051A4F0-A777-4A19-80F0-C075FC68D5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6051A4F0-A777-4A19-80F0-C075FC68D5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6051A4F0-A777-4A19-80F0-C075FC68D5BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06638AC4-6CFD-4E3D-9F55-F70B40627CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06638AC4-6CFD-4E3D-9F55-F70B40627CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06638AC4-6CFD-4E3D-9F55-F70B40627CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06638AC4-6CFD-4E3D-9F55-F70B40627CBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {56C5BB1B-F01F-48CE-9355-3C78BDD43A70}
+		SolutionGuid = {7BC1BFC6-B66A-4E74-9E25-70C5E48F1FE8}
 	EndGlobalSection
 EndGlobal
