@@ -1,17 +1,13 @@
-﻿using checkCryptoRate.Models;
+﻿using CheckCryptoRate.Models;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace checkCryptoRate.Helpers
+namespace CheckCryptoRate.Api
 {
     public class ConnectApi
     {
-        public BitCoinPrizeData GetCryptocurrencyData(string cryptocurrency, Currency currency)
+        public BitCoinPrizeData GetCryptocurrencyData(string cryptocurrency, CurrencyType currency)
         {
             var uri = String.Format("https://bitbay.net/API/Public/{0}{1}/ticker.json", cryptocurrency, currency);
 
