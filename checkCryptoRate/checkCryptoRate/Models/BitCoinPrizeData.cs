@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace checkCryptoRate.Models
+﻿namespace CheckCryptoRate.Models
 {
     public class BitCoinPrizeData
     {
-        public float max { get; set; }
-        public float min { get; set; }
-        public float last { get; set; }
-        public float bid { get; set; }
-        public float ask { get; set; }
-        public float vwap { get; set; }
-        public float average { get; set; }
-        public float volume { get; set; }
+        public float Max { get; set; }
+        public float Min { get; set; }
+        public float Last { get; set; }
+        public float Bid { get; set; }
+        public float Ask { get; set; }
+        public float Vwap { get; set; }
+        public float Average { get; set; }
+        public float Volume { get; set; }
 
-}
+    }
 }

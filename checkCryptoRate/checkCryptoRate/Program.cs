@@ -1,42 +1,42 @@
-﻿using checkCryptoRate.Helpers;
-using checkCryptoRate.Models;
+﻿using CheckCryptoRate.Api;
+using CheckCryptoRate.Helpers;
+using CheckCryptoRate.Interfaces;
+using CheckCryptoRate.Models;
 using System;
-using System.Collections.Generic;
 
-namespace checkCryptoRate
-{ 
-    class Program
+namespace CheckCryptoRate
+{
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             DateTime startTime = DateTime.Now;
 
             DateTime dt = DateTime.Now;
-            var dat = String.Format("{0:G}\n", dt);
-            Console.WriteLine(dat);
+            var date = String.Format("{0:G}\n", dt);
+            Console.WriteLine(date);
 
-            GetPrizeCurrency getPrizeCurrency = new GetPrizeCurrency();
+            IPrizeCurrency getPrizeCurrency = new PrizeCurrency();
             ConnectApi connectApi = new ConnectApi();
-            GetHelpData getHelpData = new GetHelpData();
-
-            var list = getHelpData.GetListCryptocurrency();
+            ICryptocurrency crypto = new Cryptocurrency();
+            var cryptocurrencies = crypto.GetCryptocurrencies();
 
             getPrizeCurrency.ShowExplanation();
 
-            foreach (var i in list)
+            foreach (var cryptocurrency in cryptocurrencies)
             {
-                BitCoinPrizeData bitCoinPrizeDataInPln = connectApi.GetCryptocurrencyData(i, Currency.PLN);
-                BitCoinPrizeData bitCoinPrizeDataInUsd = connectApi.GetCryptocurrencyData(i, Currency.USD);
-                BitCoinPrizeData bitCoinPrizeDataInEur = connectApi.GetCryptocurrencyData(i, Currency.EUR);
+                BitCoinPrizeData bitCoinPrizeDataInPln = connectApi.GetCryptocurrencyData(cryptocurrency, CurrencyType.PLN);
+                BitCoinPrizeData bitCoinPrizeDataInUsd = connectApi.GetCryptocurrencyData(cryptocurrency, CurrencyType.USD);
+                BitCoinPrizeData bitCoinPrizeDataInEur = connectApi.GetCryptocurrencyData(cryptocurrency, CurrencyType.EUR);
 
-                getPrizeCurrency.ShowPrizeCurrency(bitCoinPrizeDataInPln, i, Currency.PLN);
-                getPrizeCurrency.ShowPrizeCurrency(bitCoinPrizeDataInUsd, i, Currency.USD);
-                getPrizeCurrency.ShowPrizeCurrency(bitCoinPrizeDataInEur, i, Currency.EUR);
+                getPrizeCurrency.ShowPrizeCurrency(bitCoinPrizeDataInPln, cryptocurrency, CurrencyType.PLN);
+                getPrizeCurrency.ShowPrizeCurrency(bitCoinPrizeDataInUsd, cryptocurrency, CurrencyType.USD);
+                getPrizeCurrency.ShowPrizeCurrency(bitCoinPrizeDataInEur, cryptocurrency, CurrencyType.EUR);
             }
 
             DateTime stopTime = DateTime.Now;
-            TimeSpan roznica = stopTime - startTime;
-            Console.WriteLine("Czas pracy: {0} ms", roznica.TotalMilliseconds);
+            TimeSpan time = stopTime - startTime;
+            Console.WriteLine("Czas pracy: {0} ms", time.TotalMilliseconds);
             Console.ReadKey();
         }
     }

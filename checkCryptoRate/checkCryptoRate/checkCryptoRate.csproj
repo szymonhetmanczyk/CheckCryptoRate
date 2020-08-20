@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{06638AC4-6CFD-4E3D-9F55-F70B40627CBB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>checkCryptoRate</RootNamespace>
-    <AssemblyName>checkCryptoRate</AssemblyName>
+    <RootNamespace>CheckCryptoRate</RootNamespace>
+    <AssemblyName>CheckCryptoRate</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,12 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ICryptocurrency.cs" />
+    <Compile Include="Interfaces\IPrizeCurrency.cs" />
     <Compile Include="Models\BitCoinPrizeData.cs" />
-    <Compile Include="Helpers\ConnectApi.cs" />
+    <Compile Include="Api\ConnectApi.cs" />
     <Compile Include="Models\Cryptocurrency.cs" />
-    <Compile Include="Models\Currency.cs" />
-    <Compile Include="Helpers\GetHelpData.cs" />
-    <Compile Include="Helpers\GetPrizeCurrency.cs" />
+    <Compile Include="Models\CurrencyType.cs" />
+    <Compile Include="Helpers\PrizeCurrency.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
